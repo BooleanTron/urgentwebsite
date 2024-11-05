@@ -1,0 +1,215 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and Container Styling */
+body {
+    background-color: #FCE4EC; /* Light pastel pink */
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    margin-top:2%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #FF6F91; /* Pastel Pink */
+    font-size: 2em;
+    animation: popIn 1s ease-in-out;
+}
+
+header p {
+    color: #B39DDB; /* Light lavender */
+}
+
+/* Photo Gallery Styling */
+.gallery {
+    margin-bottom: 4%;
+}
+
+.photo-frame {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.photo-frame img {
+    padding:2%;
+    background-color: #D1C4E9;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.photo-frame img:hover {
+    transform: scale(1.05);
+}
+
+/* Video Section Styling */
+.video-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.video-section video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* GIFs Section */
+.gifs {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.gif-frame {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gif-frame img {
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Section */
+.form-section {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #D1C4E9; /* Light purple */
+    background-color: #F3E5F5; /* Pastel purple */
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #FF8A65; /* Soft pastel orange */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF7043;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .photo-frame img, .video-section video {
+        width: 100%;
+    }
+
+    .gif-frame {
+        flex-direction: column;
+    }
+}
+
+/* Highlighted Paragraph Styling */
+.highlighted-paragraph {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #7fbeec; /* Soft pastel yellow */
+    border-left: 8px solid #ffbb80; /* Accent border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #6D4C41; /* Soft brown for readability */
+    position: relative;
+}
+
+.highlighted-paragraph p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a decorative quote symbol */
+.highlighted-paragraph:before {
+    content: "❝";
+    font-size: 3em;
+    color: #FFAB91; /* Soft pastel peach */
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    opacity: 0.8;
+}
+
+.highlighted-paragraph:after {
+    content: "❞";
+    font-size: 3em;
+    color: #FFAB91; /* Soft pastel peach */
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    opacity: 0.8;
+}
+
+/* Hover effect to make it glow slightly */
+.highlighted-paragraph:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease-in-out;
+}
+
